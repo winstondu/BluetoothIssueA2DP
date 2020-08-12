@@ -27,7 +27,7 @@
 /* Begin PBXFileReference section */
 		32219DF92280D6B8007B1CA1 /* MeterTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeterTable.swift; sourceTree = "<group>"; };
 		32219DFB2280D6C8007B1CA1 /* LevelMeterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelMeterView.swift; sourceTree = "<group>"; };
-		3246359B21F142B00047E05A /* AVEchoTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVEchoTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3246359B21F142B00047E05A /* BluetoothIssue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BluetoothIssue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3246359E21F142B00047E05A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		324635A021F142B00047E05A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		324635A321F142B00047E05A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -41,8 +41,8 @@
 		3265619022899B1200ADCC03 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		32CD7FC7227F313E003FF140 /* PowerMeter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerMeter.swift; sourceTree = "<group>"; };
 		32DB914C2281AC6A00A146AB /* AudioEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioEngine.swift; sourceTree = "<group>"; };
-		870EBF9D0A0C02A17C9BE358 /* SampleCode.xcconfig */ = {isa = PBXFileReference; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
-		9C3FF370225993F532503533 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.txt; sourceTree = "<group>"; };
+		870EBF9D0A0C02A17C9BE358 /* SampleCode.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = SampleCode.xcconfig; path = Configuration/SampleCode.xcconfig; sourceTree = "<group>"; };
+		9C3FF370225993F532503533 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		C42D5FAA228E94EA001C7A20 /* Synth.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = Synth.aif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,7 +71,7 @@
 		3246359C21F142B00047E05A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3246359B21F142B00047E05A /* AVEchoTouch.app */,
+				3246359B21F142B00047E05A /* BluetoothIssue.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,16 +119,15 @@
 			children = (
 				9C3FF370225993F532503533 /* LICENSE.txt */,
 			);
-			name = LICENSE;
 			path = LICENSE;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3246359A21F142B00047E05A /* AVEchoTouch */ = {
+		3246359A21F142B00047E05A /* BluetoothIssue */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 324635AD21F142B10047E05A /* Build configuration list for PBXNativeTarget "AVEchoTouch" */;
+			buildConfigurationList = 324635AD21F142B10047E05A /* Build configuration list for PBXNativeTarget "BluetoothIssue" */;
 			buildPhases = (
 				3246359721F142B00047E05A /* Sources */,
 				3246359821F142B00047E05A /* Frameworks */,
@@ -138,9 +137,9 @@
 			);
 			dependencies = (
 			);
-			name = AVEchoTouch;
+			name = BluetoothIssue;
 			productName = echoTouch2;
-			productReference = 3246359B21F142B00047E05A /* AVEchoTouch.app */;
+			productReference = 3246359B21F142B00047E05A /* BluetoothIssue.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -159,7 +158,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3246359621F142B00047E05A /* Build configuration list for PBXProject "AVEchoTouch" */;
+			buildConfigurationList = 3246359621F142B00047E05A /* Build configuration list for PBXProject "BluetoothIssue" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -172,7 +171,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3246359A21F142B00047E05A /* AVEchoTouch */,
+				3246359A21F142B00047E05A /* BluetoothIssue */,
 			);
 		};
 /* End PBXProject section */
@@ -358,16 +357,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 84A68Z45VB;
 				INFOPLIST_FILE = AVEchoTouch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.AVEchoTouch${SAMPLE_CODE_DISAMBIGUATOR}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BluetoothIssue;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_INCLUDE_PATHS = "$(BUILT_PRODUCTS_DIR)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -381,15 +381,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 84A68Z45VB;
 				INFOPLIST_FILE = AVEchoTouch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.apple-samplecode.AVEchoTouch${SAMPLE_CODE_DISAMBIGUATOR}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BluetoothIssue;
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -398,7 +399,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3246359621F142B00047E05A /* Build configuration list for PBXProject "AVEchoTouch" */ = {
+		3246359621F142B00047E05A /* Build configuration list for PBXProject "BluetoothIssue" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				324635AB21F142B10047E05A /* Debug */,
@@ -407,7 +408,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		324635AD21F142B10047E05A /* Build configuration list for PBXNativeTarget "AVEchoTouch" */ = {
+		324635AD21F142B10047E05A /* Build configuration list for PBXNativeTarget "BluetoothIssue" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				324635AE21F142B10047E05A /* Debug */,
