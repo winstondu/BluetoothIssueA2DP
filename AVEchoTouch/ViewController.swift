@@ -44,13 +44,23 @@ class ViewController: UIViewController {
                                                selector: #selector(self.handleMediaServicesWereReset(_:)),
                                                name: AVAudioSession.mediaServicesWereResetNotification,
                                                object: AVAudioSession.sharedInstance())
+        pollAudioSessionDetails()
+    }
+    
+    // Repeatedly prints the audio session details.
+    func pollAudioSessionDetails() {
+        let session = AVAudioSession.sharedInstance()
+        let bluetoothAvailable = session.currentRoute.outputs.contains(where: { $0.portType == .bluetoothHFP || $0.portType == .bluetoothA2DP })
+        print("Audio session current(category:\(session.category), mode:\(session.mode), options:\(session.categoryOptions), bluetooth availability: \(bluetoothAvailable), sampleRate: \(session.sampleRate)")
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            self.pollAudioSessionDetails()
+        }
     }
     
     func setupAudioSession(sampleRate: Double) {
         let session = AVAudioSession.sharedInstance()
-
         do {
-            try session.setCategory(.playAndRecord, options: .defaultToSpeaker)
+            try session.setCategory(.playAndRecord, mode: .default, options: [.defaultToSpeaker, .allowBluetoothA2DP, .mixWithOthers])
         } catch {
             print("Could not set audio category: \(error.localizedDescription)")
         }
@@ -70,9 +80,8 @@ class ViewController: UIViewController {
             fxMeter.levelProvider = audioEngine.fxPowerMeter
             voiceIOMeter.levelProvider = audioEngine.voiceIOPowerMeter
 
-            setupAudioSession(sampleRate: audioEngine.voiceIOFormat.sampleRate)
-
             audioEngine.setup()
+            setupAudioSession(sampleRate: audioEngine.voiceIOFormat.sampleRate)
             audioEngine.start()
         } catch {
             fatalError("Could not set up audio engine: \(error)")
