@@ -60,6 +60,7 @@ class ViewController: UIViewController {
     func setupAudioSession(sampleRate: Double) {
         let session = AVAudioSession.sharedInstance()
         do {
+            // If .allowBluetoothA2DP were replaced by .allowBluetooth, things are fine
             try session.setCategory(.playAndRecord, mode: .default, options: [.defaultToSpeaker, .allowBluetoothA2DP, .mixWithOthers])
         } catch {
             print("Could not set audio category: \(error.localizedDescription)")
